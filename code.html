@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div id="login" class="login-container">
+        <h2>Admin Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="dashboard" class="dashboard-container" style="display: none;">
+        <h2>Dashboard</h2>
+        <div class="edit-section">
+            <h3>Edit Profile</h3>
+            <input type="text" id="edit-name" placeholder="Full Name">
+            <textarea id="edit-bio" placeholder="Bio"></textarea>
+            <input type="file" id="edit-photo" accept="image/*">
+            <button id="save-profile">Save Profile</button>
+        </div>
+        <div class="edit-section">
+            <h3>Edit About</h3>
+            <input type="text" id="edit-about-name" placeholder="Name">
+            <input type="text" id="edit-about-dob" placeholder="Date of Birth">
+            <input type="text" id="edit-about-degree" placeholder="Degree">
+            <input type="text" id="edit-about-college" placeholder="College">
+            <input type="text" id="edit-about-status" placeholder="Status">
+            <button id="save-about">Save About</button>
+        </div>
+        <div class="edit-section">
+            <h3>Manage Gallery</h3>
+            <input type="file" id="add-gallery-photo" accept="image/*" multiple>
+            <button id="add-gallery">Add Photos</button>
+            <div id="gallery-preview"></div>
+        </div>
+        <button id="logout">Logout</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
